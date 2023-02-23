@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+/* 마우스가 올라간 상태의 div태그 요소 선택 */
+div:hover {
+	color: red;
+}
+
+/* 마우스가 올라간 상태의 span태그 요소 선택 */
+span:hover {
+	background-color: green;
+}
+
+/* ------------------------------------------------------- */
+
+span:active {
+	color: orange;
+	font-size: 30px;
+}
+
+/* 마우스 눌림이 발생한 button태그 선택 */
+button:active {
+	color: blue;
+}
+
+/* 마우스 눌림이 발생한 type속성이 "button"인 input 태그 */
+input[type="button"]:active {
+	color: tomato;
+}
+
+/* ------------------------------------------------------- */
+
+a {
+	text-decoration: none;
+}
+
+/* 방문 전 상태의 a태그 선택 */
+a:link{
+	color: green;
+	
+	/* 밑줄제거 */
+	text-decoration: none;
+}
+
+/* 방문 후 상태의 a태그 선택 */
+a:visited{
+	color: red;
+}
+/* ------------------------------------------------------- */
+
+/* 비활성화 상태 - 사용자 입력 못 받는 상태 */
+:disabled {
+	font-size: 8px;
+}
+
+/* 활성화 상태 - 사용자 입력을 받아들이는 상태 */
+:enabled {
+	font-size: italic;
+}
+
+/* ------------------------------------------------------- */
+
+/* 체크된 상태의 태그, checkbox, radio */
+:checked {
+	width: 50px;
+	height: 50px;
+}
+
+/* checked상태의 type속성이 checkbox인 input 태그의
+	 인접한 형제 label태그 선택  */
+input[type="checkbox"]:checked + label{
+	color: blue;
+}
+
+/* checked상태인 #chk의 인접 형제 label태그 선택  */
+#chk:Checked + label {
+	background-color: tomato;
+}
+/* ------------------------------------------------------- */
+
+/* 포커스를 얻은 요소 선택 */
+:focus {
+	color: maroon;
+}
+
+/* focus - 포커스 상태를 얻을 때 발생하는 이벤트 */
+/* blur - 포커스 상태를 잃었을 때 발생하는 이벤트 */
+
+/* ------------------------------------------------------- */	
+
+/* 자식요소가 없는 요소 선택 */
+/* <hr>이나 <input>같은 닫는태그를 사용하지 않는 
+	요소들도 전부 선택한다
+	*/
+:empty {
+	height: 20px;
+	background: yellow;
+}
+
+div:empty {
+	height: 20px;
+	background: yellow;
+}
+
+
+
+/* ------------------------------------------------------- */
+
+</style>
+
+</head>
+<body>
+
+<div>
+
+<span>span 태그 안쪽</span>span 태그 바깥쪽 <br>
+<input type="button" value="확인"> <br>
+
+<a href="https://www.naver.com/">네이버</a>
+<a href="https://www.daum.net/">다음</a>
+<a href="https://www.daum.net/">다음</a>
+<hr>
+
+<label><input type="checkbox"> 확인 </label>
+<label><input type="radio"> 라디오 </label>
+
+<input type="checkbox" id="chk">
+<label for="chk">체크</label>
+<hr>
+
+<button disabled="disabled">비활성 버튼</button>
+<button>활성버튼</button>
+<hr>
+
+<div></div>
+<input type="text">
+
+</div>
+
+</body>
+</html>

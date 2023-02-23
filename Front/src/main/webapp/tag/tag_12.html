@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>form 태그</h1>
+<h3>input태그의 type속성</h3>
+<hr>
+
+<!-- **포커스, focus -->
+<!-- 	키보드 입력을 받아들일 수 있는 상태 -->
+
+<!-- ** <form>태그에 <input type="text">태그가 단독으로  -->
+<!-- 	존재할 때 엔터 키 입력으로 submit할 수 있다 -->
+
+<!-- ** name속성 -->
+<!-- 	요청 데이터의 항목 이름을 설정한다 -->
+<!-- 	name속성이 없는 입력 창은 데이터를 전송(submit)할 수 없다 -->
+
+<!-- ** id속성 -->
+<!-- 	해당 HTML문서 내에서 태그에 고유한 식별값(이름)을 설정한다 -->
+
+<!-- ** name속성값과 id속성값을 일반적으로 똑같은 문자로 설정한다 -->
+<!-- ** 두 속성의 역할/목적 구분 철저히! -->
+
+
+<!-- ** <label> 태그 -->
+<!-- 	"입력창"과 "설명 텍스트"를 연결하는 태그 -->
+<!-- 	"설명 텍스트"를 클릭하면 "입력창"으로 포커스가 넘어간다 -->
+
+
+<!-- ** required 속성 -->
+<!-- 	입력값 없이 submit이 안되도록 설정한다 -->
+<!-- 	submit할 때 필수 입력값이라는 경고 문구가 출력된다 -->
+
+<!-- ** required속성은 속성값을 적지 않아도 특성이 적용된다 -->
+<!-- 	required 만 적용하거나 -->
+<!-- 	required="required" 로 적용한다 -->
+
+<!-- ** required, selected, checked, readonly, disabled
+<!-- 	속성의 존재 유무로만 설정항목이 되는 속성들이다 -->
+
+
+<form action="" method="get">
+
+<label> 아이디 <!-- 폼양식에 태그 이름을 붙임  -->
+
+<input type="text" name="userid" id="uid"
+ placeholder="아이디를 입력하세요"
+ size="10" value=banana"
+ maxlength="7"
+ required="required"
+ autocomplete="off">
+</label>
+
+<br>
+
+<label for="upw">패스워드</label>
+
+<input type="password" name="userpw" id="upw"
+ placeholder="비밀번호를 입력하세요">
+
+<hr>
+
+<label for="chk1">체크1</label>
+<input type="checkbox" id="chk1" name="chk" value="A">
+|
+<label for="chk2">체크2</label>
+<input type="checkbox" id="chk2" name="chk" value="B" checked>
+|
+<label for="chk3">체크3</label>
+<input type="checkbox" id="chk3" name="chk" value="C" checked="checked">
+
+<!-- 체크(checked)하지 않고 전송(submit)하면 아예 전달 데이터가 전달되지 않는다 -->
+
+<!-- 체크된 항목의 값은 "on"을 기본으로 전달한다 -->
+<!-- value속성을 지정하면 지정된 값을 전달한다 -->
+
+<!-- 같은 name으로 지정된 체크박스들은 같은 카테고리로 표현된다 -->
+<!-- 같은 name체크박스들은 value속성값을 각각 다르게 설정하도록 한다 -->
+<!-- 	ex)	chk=A&chk=B&chk=C -->
+
+<!-- 체크된 상태를 기본값으로 설정할 땐 checked속성을 부여한다 -->
+
+<hr>
+
+<label>
+<input type="radio" name="gender" value="m">남성
+</label>
+
+<label>
+<input type="radio" name="gender" value="f" checked>여성
+</label>
+
+<label>
+<input type="radio" name="gender" value="o">기타
+</label>
+
+<!-- radio는 checkbox와 비슷한 동작을 한다 -->
+
+<!-- 같은 name으로 설정된 radio들은 같은 라디오그룹(Radio Group)이 된다 -->
+<!-- 라디오그룹 내에서 한 개 항목만 선택할 수 있다 -->
+
+<hr>
+
+<!-- 일반 버튼 -->
+<!-- 	주로 click 을 감지하도록 작성한다 -->
+<!-- 	focus 상태에서 space bar를 눌러도 click으로 처리된다 -->
+
+
+<input type="button" value="버튼">
+
+<input type="button" value="알림창"
+ onclick="alert('알림! 클릭 감지!')"
+ onkeyup="alert('keyup')">
+
+<hr>
+
+<!-- SUBMIT 버튼 -->
+<!-- 	<form>태그에 작성된 데이터를 서버로 전송(subtmi)한다 -->
+
+<!-- 	 기본적으로 "제출" 문구로 보이지만 -->
+<!-- 	value속성값으로 변경할 수 있다 -->
+
+<input type="submit">
+
+<hr>
+
+<!-- RESET 버튼 -->
+<!-- 	초기화 버튼 -->
+
+<!-- 	페이지 새로고침없이 입력된 창들을 초기 상태로 되돌린다 -->
+
+<input type="reset">
+
+<hr>
+
+<!-- 버튼 태그 -->
+<!-- 	일반 버튼이 아닌 SUBMIT 버튼으로 만들어진다 -->
+<button>버튼 태그는 SUBMIT버튼으로 만들어진다</button>
+
+<!-- 	버튼 태그에 type="button"을 설정해야 일반 버튼이 된다 -->
+<button type="button">일반 버튼</button>
+
+<!-- ** type="submit|button|reset" 설정 가능 -->
+<!-- 	기본값은 submit -->
+
+<hr>
+
+<!-- 파일 선택창 -->
+<!-- 	선택된 파일의 이름만 전송한다 -->
+<input type="file" name="f">
+
+<!-- 	multiple속성을 적용하면 다중 파일 선택 가능하다 -->
+<input type="file" name="f_multi" multiple="multiple">
+
+
+<hr>
+<input type="submit" value="전송">
+<button>전송</button>
+
+<hr>
+
+<!-- HTML5 에서 추가된 type속성값 -->
+
+<!-- 숫자만 입력 가능 -->
+NUMBER
+<input type="number" name="n" min="10" max="50" step="5">
+
+<!-- ** min, max 속성은 submit될 때 데이터 검증에 사용된다 -->
+
+<hr>
+
+<!-- 범위 내에서 숫자를 선택하는 타입 -->
+<!-- 	기본범위는 0~100 -->
+<!-- 	기본 선택 숫자는 50 -->
+RANGE
+<input type="range" name="r" min="100" max="1000" step="100">
+
+<hr>
+
+<!-- 이메일 형식 유지 -->
+<!-- 	submit할 때 "텍스트@텍스트" 형식을 검사한다 -->
+EMAIL
+<input type="email" name="e">
+
+<hr>
+
+<!-- URL 형식 유지 -->
+<!-- 	"프로토콜://도메인" 형식 검사 -->
+
+URL
+<input type="url" name="u">
+
+<hr>
+
+<!-- 날짜 피커, Date Picker -->
+<!-- 	"YYYY-MM-DD" 형식의 날짜 데이터를 전송한다 -->
+DATE
+<input type="date" name="d">
+
+<hr>
+
+<!-- 시간 피커, Time Picker -->
+<!-- 	"HH24:MI" 형식으로 시간데이터를 전송한다 -->
+TIME
+<input type="time" name="t">
+
+<hr>
+
+<!-- 색상 피커, Color Picker -->
+<!-- 	RGB색상값을 16진수표기형식에 맞게 전송한다 -->
+COLOR
+<input type="color" name="c">
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+label {
+	display: inline-block;
+    width: 100px;
+}
+fieldset {
+	width: 290px;
+}
+</style>
+
+</head>
+<body>
+
+<form action="" method="get">
+	
+	<fieldset>
+		<legend>인적사항</legend>
+		
+		<label for="userid">아이디</label> 
+		<input type="text" name="userid" id="userid"><br>
+	
+		<label for="userpw">비밀번호</label>
+		<input type="text" name="userpw" id="userpw"><br>
+		
+		<label for="useremail">이메일</label>
+		<input type="text" name="useremail" id="useremail"><br>
+		
+		
+		<label for="gender">성별</label>
+		<input type="radio" name="gender" value="m">남성 
+		<label> <input type="radio" name="gender" value="f">여성 </label>
+		
+		<label for="chk1">결혼여부</label>
+		<input type="checkbox" id="chk1" name="chk" value="A">
+		
+		<br>
+		
+		<label for="loc">지역</label>		
+		<datalist id="loc">
+		<option value="seoul">서울</option>
+		<option value="gyenggi">경기</option>
+		<option value="jeoila">전라</option>
+		<option value="gyeongsang">경상</option>
+		</datalist>
+
+		<input list="loc" name="f">
+
+		<label for="content">하고싶은말</label>
+		<textarea rows="5" cols="30" name="content" id="content"
+ 		 placeholder="입력하세요"></textarea>
+		
+		<label></label>
+		<input type="submit">
+		<button type="reset">취소</button>
+		
+	</fieldset>
+
+
+
+
+
+
+</fieldset>
+</form>
+
+
+
+</body>
+</html>
